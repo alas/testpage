@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  background: #808080;
+  font-family: monospace;
+}
+
+.window {
+  border: 2px solid black;
+  background: #c0c0c0;
+  width: 860px;
+  margin: 20px auto;
+  padding: 8px;
+  box-shadow: 2px 2px 0 black;
+}
+
+.title-bar {
+  background: #000080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+.title-buttons button {
+  font-family: monospace;
+  font-size: 14px;
+  background: #c0c0c0;
+  border: 1px solid black;
+  width: 24px;
+  height: 20px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+canvas {
+  display: block;
+  margin: 10px auto;
+  border: 2px solid black;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.controls > div {
+  flex: 1;
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+input[type='range'] {
+  width: 100%;
+}
+
+select, button {
+  width: 100%;
+  padding: 4px;
+  font-family: monospace;
+}
