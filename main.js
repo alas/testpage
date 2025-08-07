@@ -61,11 +61,19 @@ function LoFiVisualiser() {
 
   const handlePlay = async () => {
     if (!isPlaying) {
-      await Tone.start();
+      await Tone.start(); // user gesture: unlock audio
+  
+      if (!player.current) {
+        player.current = new Tone.Player("vaporwave.mp3").toDestination();
+        analyser.current = new Tone.Analyser("fft", 256);
+        player.current.connect(analyser.current);
+      }
+  
       player.current.start();
       setIsPlaying(true);
     }
   };
+
 
   return (
     <div className="window">
@@ -114,3 +122,4 @@ function LoFiVisualiser() {
 }
 
 ReactDOM.createRoot(document.getElementById('app')).render(<LoFiVisualiser />);
+
