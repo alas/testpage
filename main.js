@@ -1,5 +1,5 @@
 const { useEffect, useRef, useState } = React;
-const { HuePicker } = reactColor;
+const { HuePicker } = window.ReactColorful;
 
 function LoFiVisualiser() {
   const canvasRef = useRef(null);
@@ -122,4 +122,5 @@ function LoFiVisualiser() {
 }
 
 ReactDOM.createRoot(document.getElementById('app')).render(<LoFiVisualiser />);
+
 
